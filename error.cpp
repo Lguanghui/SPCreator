@@ -13,21 +13,20 @@
 // limitations under the License.
 
 //
-// Created by Guanghui Liang on 2023/11/16.
+// Created by Guanghui Liang on 2023/12/2.
 //
 
-#ifndef SPCREATOR_OPTIONS_PARSE_H
-#define SPCREATOR_OPTIONS_PARSE_H
+#include "error.h"
+#include <iostream>
 
-#include <boost/program_options.hpp>
-#include <string>
-
-struct ProgramOptions {
-    std::string class_prefix;
-    std::string author_name;
-    std::string package_name;
-};
-
-ProgramOptions ParseOptions(int argc, char *argv[]);
-
-#endif //SPCREATOR_OPTIONS_PARSE_H
+/**
+ * @brief Function to exit the program if an error occurs.
+ *
+ * This function prints an error message to the console and exits the program with a non-zero exit code.
+ *
+ * @param errorMessage The error message to be displayed.
+ */
+void ExitWithError(const std::string& errorMessage) {
+    std::cerr << "Error: " << errorMessage << std::endl;
+    exit(1);
+}

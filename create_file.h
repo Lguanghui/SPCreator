@@ -13,19 +13,27 @@
 // limitations under the License.
 
 //
-// Created by 梁光辉 on 2023/11/29.
+// Created by Guanghui Liang on 2023/11/29.
 //
 
 #ifndef SPCREATOR_CREATE_FILE_H
 #define SPCREATOR_CREATE_FILE_H
 
 #include <string>
+#include "options_parse.h"
+
+#define TEMPLATE_FILE_NAME "IDETemplateMacros.plist"
 
 /**
  * create a file with specific file path and file content.
  * @param file_path 文件路径
  * @param content 文件内容
  */
-void create_file(std::string file_path, std::string content);
+void CreateFile(const std::string& file_path, const std::string& content);
+
+/**
+ * create `IDETemplateMacros.plist` file in `.swiftpm`
+ */
+void CreateTemplateFile(ProgramOptions &options);
 
 #endif //SPCREATOR_CREATE_FILE_H

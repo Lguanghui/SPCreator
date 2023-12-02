@@ -13,21 +13,14 @@
 // limitations under the License.
 
 //
-// Created by Guanghui Liang on 2023/11/16.
+// Created by Guanghui Liang on 2023/12/2.
 //
 
-#ifndef SPCREATOR_OPTIONS_PARSE_H
-#define SPCREATOR_OPTIONS_PARSE_H
+#ifndef SPCREATOR_ERROR_H
+#define SPCREATOR_ERROR_H
 
-#include <boost/program_options.hpp>
 #include <string>
 
-struct ProgramOptions {
-    std::string class_prefix;
-    std::string author_name;
-    std::string package_name;
-};
+void ExitWithError(const std::string& errorMessage);
 
-ProgramOptions ParseOptions(int argc, char *argv[]);
-
-#endif //SPCREATOR_OPTIONS_PARSE_H
+#endif //SPCREATOR_ERROR_H

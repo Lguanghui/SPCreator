@@ -13,11 +13,14 @@
 // limitations under the License.
 
 #include <iostream>
-
-#include "exec_command.h"
 #include "options_parse.h"
+#include "create_package.h"
+#include "create_file.h"
 
 int main(int argc, char *argv[]) {
-    ProgramOptions programOptions = parse_options(argc, argv);
+    ProgramOptions programOptions = ParseOptions(argc, argv);
+    CreatePackage(programOptions);
+    sleep(3);
+    CreateTemplateFile(programOptions);
     return 0;
 }

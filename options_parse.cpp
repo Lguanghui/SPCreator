@@ -19,7 +19,7 @@
 #include "options_parse.h"
 #include <iostream>
 
-ProgramOptions parse_options(int argc, char *argv[]) {
+ProgramOptions ParseOptions(int argc, char *argv[]) {
     using namespace boost::program_options;
 
     options_description options_description("OPTIONS");
@@ -53,6 +53,7 @@ ProgramOptions parse_options(int argc, char *argv[]) {
     }
 
     ProgramOptions program_options;
+    program_options.package_name = options_map["name"].as<std::string>();
     program_options.class_prefix = options_map["classPrefix"].as<std::string>();
     std::vector<std::string> raw_author_name = options_map["authorName"].as<std::vector<std::string>>();
     for (std::string const& item : raw_author_name) {
@@ -67,6 +68,7 @@ ProgramOptions parse_options(int argc, char *argv[]) {
     std::cout << options_description << std::endl;
 
     std::cout << "Program options from shell command:" << std::endl;
+    std::cout << "package name: " << program_options.package_name << std::endl;
     std::cout << "class prefix: " << program_options.class_prefix << std::endl;
     std::cout << "copy right: " << program_options.author_name << std::endl;
 #endif

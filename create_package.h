@@ -13,21 +13,17 @@
 // limitations under the License.
 
 //
-// Created by Guanghui Liang on 2023/11/16.
+// Created by Guanghui Liang on 2023/12/2.
 //
 
-#ifndef SPCREATOR_OPTIONS_PARSE_H
-#define SPCREATOR_OPTIONS_PARSE_H
+#ifndef SPCREATOR_CREATE_PACKAGE_H
+#define SPCREATOR_CREATE_PACKAGE_H
 
-#include <boost/program_options.hpp>
-#include <string>
+#include "options_parse.h"
 
-struct ProgramOptions {
-    std::string class_prefix;
-    std::string author_name;
-    std::string package_name;
-};
+/**
+ * create a swift package using official `swift package` command.
+ */
+void CreatePackage(ProgramOptions &options);
 
-ProgramOptions ParseOptions(int argc, char *argv[]);
-
-#endif //SPCREATOR_OPTIONS_PARSE_H
+#endif //SPCREATOR_CREATE_PACKAGE_H
