@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.26)
-project(SPCreator)
+project(spcreator)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(SPCreator main.cpp)
+add_executable(spcreator main.cpp)
 
-target_include_directories(SPCreator PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
+target_include_directories(spcreator PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
 
 file (GLOB files *.cpp)
 foreach (file ${files})
-    target_sources(SPCreator PRIVATE ${file})
+    target_sources(spcreator PRIVATE ${file})
 #    target_sources(SPCreator PRIVATE exec_command.cpp options_parse.cpp)
 endforeach ()
 
