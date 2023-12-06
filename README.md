@@ -4,6 +4,8 @@
 ---
 
 [![CMake Build & Test](https://github.com/Lguanghui/SPCreator/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/Lguanghui/SPCreator/actions/workflows/cmake-single-platform.yml)
+![GitHub License](https://img.shields.io/github/license/Lguanghui/SPCreator)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/Lguanghui/SPCreator)
 
 English / [中文](https://github.com/Lguanghui/SPCreator/blob/main/README_zh-CN.md)
 
